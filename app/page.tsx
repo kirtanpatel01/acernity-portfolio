@@ -1,4 +1,5 @@
 import Container from "./components/container";
+import Projects from "./components/projects";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
         <p className="text-secondary text-sm pt-4 max-w-lg">
           I'm a developer and I love to create amazing web experiences. I love to create blaa blaaaa blaaa.
         </p>
+        <Projects />
       </Container>
     </div>
   );
