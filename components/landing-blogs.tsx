@@ -1,5 +1,5 @@
 import React from 'react'
-import { getBlogs } from '../utils/mdx'
+import { getBlogs } from '../app/utils/mdx'
 import { Link } from 'next-view-transitions';
 
 async function LandingBlogs() {

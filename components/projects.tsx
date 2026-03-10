@@ -4,6 +4,7 @@ import { motion } from 'motion/react'
 import { projectTraceSource } from 'next/dist/build/swc/generated-native'
 import Image from 'next/image'
 import Link from 'next/link'
+import SubHeading from './sub-heading'
 
 function Projects() {
   const projects = [
@@ -46,9 +47,9 @@ function Projects() {
   ]
   return (
     <div className='py-10'>
-      <p className='text-secondary max-w-lg pt-4 text-sm'>
+      <SubHeading>
         I love to create meaningful sites which can serves someone (at least it SHOULD SERVE ME!)
-      </p>
+      </SubHeading>
 
       <div className="grid md:grid-cols-2 gap-4 py-10">
         {projects.map((project, idx) => (
