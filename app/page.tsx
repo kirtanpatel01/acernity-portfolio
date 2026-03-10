@@ -1,4 +1,5 @@
 import Container from "./components/container";
+import LandingBlogs from "./components/landing-blogs";
 import Projects from "./components/projects";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
           I'm a developer and I love to create amazing web experiences. I love to create blaa blaaaa blaaa.
         </p>
         <Projects />
+        <LandingBlogs />
       </Container>
     </div>
   );

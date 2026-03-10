@@ -31,7 +31,7 @@ function Navbar() {
       <motion.nav
         animate={{
           boxShadow: scrolled ? "var(--shadow-aceternity)" : "none",
-          width: scrolled ? "32%" : "100%",
+          width: scrolled ? "34.5%" : "100%",
           y: scrolled ? 10 : 0,
         }}
         transition={{
@@ -40,13 +40,15 @@ function Navbar() {
         }}
         className="fixed inset-x-0 top-0 mx-auto max-w-4xl flex items-center justify-between p-2 rounded-full bg-white dark:bg-black"
       >
-        <Image
+        <Link href="/">
+          <Image
           src={"/cool.jpg"}
           alt={"cool"}
           height={68}
           width={68}
           className='h-10 w-10 rounded-full'
         />
+        </Link>
 
         <div className="flex items-center">
           {navItems.map((item, idx) => (
