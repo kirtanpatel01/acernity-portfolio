@@ -6,7 +6,7 @@ import SubHeading from '@/components/sub-heading'
 function page() {
   return (
     <div className='flex items-start justify-start min-h-screen'>
-      <Container className='min-h-[200vh] px-10 md:pt-20 md:pb-10'>
+      <Container className='min-h-screen px-10 md:pt-20 md:pb-10'>
         <Heading>Projects</Heading>
         <SubHeading>Here are some of the projects I&apos;ve worked on.</SubHeading>
         <Projects />

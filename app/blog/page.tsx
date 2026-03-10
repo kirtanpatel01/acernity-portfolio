@@ -18,7 +18,7 @@ export default async function BlogPage() {
 
   return (
     <div className="min-h-screen flex items-start justify-start">
-      <Container className="min-h-[200vh] p-4 md:pt-20 md:p-10">
+      <Container className="min-h-screen p-4 md:pt-20 md:p-10">
         <Heading>All Blogs</Heading>
         <SubHeading>I'm a developer and I love to create amazing web experiences. I love to create blaa blaaaa blaaa.</SubHeading>
         <div className="flex flex-col gap-4 py-10">
