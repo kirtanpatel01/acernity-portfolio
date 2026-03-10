@@ -41,7 +41,7 @@ function Timeline() {
                 <motion.h3
                   initial={{
                     opacity: 0,
-                    y: 10,
+                    y: -10,
                   }}
                   animate={{
                     opacity: isInView ? 1 : 0,
@@ -61,11 +61,11 @@ function Timeline() {
                 <motion.p
                   initial={{
                     opacity: 0,
-                    y: 10,
+                    y: -10,
                   }}
                   animate={{
                     opacity: isInView ? 1 : 0,
-                    y: isInView ? 0 : 10,
+                    y: isInView ? 0 : -10,
                   }}
                   transition={{
                     duration: 0.3,
@@ -102,11 +102,11 @@ const Step = ({
     <motion.div
       initial={{
         opacity: 0,
-        y: 10,
+        y: -10,
       }}
       animate={{
         opacity: isInView ? 1 : 0,
-        y: isInView ? 0 : 10,
+        y: isInView ? 0 : -10,
       }}
       transition={{
         duration: 0.3,

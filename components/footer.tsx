@@ -5,7 +5,7 @@ import { socials } from '@/constants/socials'
 
 function Footer() {
   return (
-    <Container className='flex justify-between border-t border-neutral-100 px-4 py-3'>
+    <Container className='flex justify-between border-t border-neutral-100 py-3 px-10'>
       <p className='text-xs text-neutral-500'>Built with ❤️ by Kirtan Patel</p>
       <div className='flex items-center justify-center gap-4'>
         {socials.map((social) => (

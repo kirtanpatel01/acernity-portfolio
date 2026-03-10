@@ -1,0 +1,32 @@
+---
+title: 'Animating with Framer Motion and React'
+description: "Bring your React components to life with Framer Motion. We'll show you how to create smooth transitions, gesture-based animations, and complex layout changes."
+image: '/images/blog/tailwind-basics.png'
+date: '2025-02-18'
+---
+
+# Animating with Framer Motion and React
+
+Motion is a powerful tool for guiding user attention and making your applications more engaging. Framer Motion is the premier library for creating sophisticated animations in React with ease.
+
+## Getting Started
+
+Framer Motion uses a declarative API. You simply wrap your components in `motion` elements and define the `initial`, `animate`, and `exit` states.
+
+```tsx
+<motion.div
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 0.5 }}
+>
+  Hello World
+</motion.div>
+```
+
+## Gestures
+
+Handling hover, tap, and drag gestures is incredibly simple. Instead of complex event listeners, you just add props to your motion components.
+
+## Layout Animations
+
+Framer Motion can automatically animate changes in your component's layout. If you change a component's position or size, the `layout` prop will ensure it transitions smoothly between states.

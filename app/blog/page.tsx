@@ -21,7 +21,7 @@ export default async function BlogPage() {
       <Container className="min-h-screen p-4 md:pt-20 md:p-10">
         <Heading>All Blogs</Heading>
         <SubHeading>I'm a developer and I love to create amazing web experiences. I love to create blaa blaaaa blaaa.</SubHeading>
-        <div className="flex flex-col gap-4 py-10">
+        <div className="flex flex-col gap-8 py-10">
           {blogs.map((blog) => (
             <Link
               key={blog.slug}
@@ -40,7 +40,7 @@ export default async function BlogPage() {
               })}</p>
               </div>
               <p className="text-secondary text-sm max-w-lg pt-2">
-                {truncate(blog.description || "", 150)}
+                {truncate(blog.description || "", 145)}
               </p>
             </Link>
           ))}
