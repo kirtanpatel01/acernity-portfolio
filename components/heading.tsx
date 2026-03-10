@@ -33,7 +33,7 @@ function Heading({
         once: true
       }}
     >
-      <Tag className={cn("text-2xl md:text-4xl font-bold tracking-tight text-primary drop-shadow-lg", className)}>
+      <Tag className={cn("text-2xl px-4 md:text-4xl font-bold tracking-tight text-primary drop-shadow-lg", className)}>
         {children}
       </Tag>
     </motion.div>

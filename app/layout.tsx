@@ -25,7 +25,7 @@ export default function RootLayout({
     <ViewTransitions>
       <html lang="en">
         <body
-          className={`${inter.className} antialiased bg-neutral-100 dark:bg-neutral-700`}
+          className={`${inter.className} antialiased bg-neutral-100 dark:bg-neutral-700 [--pattern-fg:var(--color-neutral-950)]/5`}
         >
           <Navbar />
           {children}

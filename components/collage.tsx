@@ -7,7 +7,7 @@ import { collageItems } from "@/constants/collage";
 
 export default function Collage() {
   return (
-    <DraggableCardContainer className="relative flex min-h-124 w-full items-center justify-center overflow-clip">
+    <DraggableCardContainer className="relative flex min-h-124 w-full items-center justify-center overflow-clip px-4 ">
       {collageItems.map((item) => (
         <DraggableCardBody key={item.title} className={item.className}>
           <img

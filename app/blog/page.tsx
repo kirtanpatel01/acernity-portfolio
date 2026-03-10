@@ -4,6 +4,7 @@ import { getBlogs } from "../utils/mdx";
 import { Link } from "next-view-transitions";
 import Heading from "@/components/heading";
 import SubHeading from "@/components/sub-heading";
+import Scales from "@/components/scales";
 
 export const metadata: Metadata = {
   title: "All blogs - Kirtan Patel",
@@ -18,10 +19,11 @@ export default async function BlogPage() {
 
   return (
     <div className="min-h-screen flex items-start justify-start">
-      <Container className="min-h-screen p-4 md:pt-20 md:p-10">
+      <Container className="min-h-screen px-8 md:pt-20 md:pb-10">
+        <Scales />
         <Heading>All Blogs</Heading>
         <SubHeading>I'm a developer and I love to create amazing web experiences. I love to create blaa blaaaa blaaa.</SubHeading>
-        <div className="flex flex-col gap-8 py-10">
+        <div className="flex flex-col gap-8 py-10 px-4">
           {blogs.map((blog) => (
             <Link
               key={blog.slug}
@@ -29,15 +31,15 @@ export default async function BlogPage() {
               className=""
             >
               <div className="flex items-center justify-between">
-                 <h2 className="text-primary font-bold tracking-tight">
-                {blog.title}
-              </h2>
-              <p className="text-secondary text-xs">{new Date(blog.date).toLocaleDateString("en-us", {
-                weekday: "long",
-                year: "numeric",
-                month: "short",
-                day: "numeric"
-              })}</p>
+                <h2 className="text-primary font-bold tracking-tight">
+                  {blog.title}
+                </h2>
+                <p className="text-secondary text-xs">{new Date(blog.date).toLocaleDateString("en-us", {
+                  weekday: "long",
+                  year: "numeric",
+                  month: "short",
+                  day: "numeric"
+                })}</p>
               </div>
               <p className="text-secondary text-sm max-w-lg pt-2">
                 {truncate(blog.description || "", 145)}

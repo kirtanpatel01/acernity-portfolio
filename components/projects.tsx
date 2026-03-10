@@ -9,7 +9,7 @@ import SectionHeading from './section-heading'
 
 function Projects() {
   return (
-    <div className='py-10'>
+    <div className='my-4 border-y border-neutral-100 px-4 dark:border-neutral-800 shadow-section-inset'>
       <SectionHeading delay={0.2}>
         I love to create meaningful sites which can serves someone (at least it SHOULD SERVE ME!)
       </SectionHeading>
@@ -22,7 +22,7 @@ function Projects() {
               filter: "blur(10px)",
               y: 10,
             }}
-            whileInView={{
+            whileInView={{ 
               opacity: 1,
               filter: "blur(0px)",
               y: 0,

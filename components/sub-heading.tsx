@@ -34,7 +34,7 @@ function SubHeading({
         once: true
       }}
     >
-      <Tag className={cn("text-secondary text-sm pt-4 max-w-lg", className)}>
+      <Tag className={cn("text-secondary px-4 text-sm pt-4 max-w-lg", className)}>
         {children}
       </Tag>
     </motion.div>

@@ -2,11 +2,13 @@ import Container from '../../components/container'
 import Projects from '@/components/projects'
 import Heading from '@/components/heading'
 import SubHeading from '@/components/sub-heading'
+import Scales from '@/components/scales'
 
 function page() {
   return (
     <div className='flex items-start justify-start min-h-screen'>
-      <Container className='min-h-screen px-10 md:pt-20 md:pb-10'>
+      <Container className="min-h-screen px-8 md:pt-20 md:pb-10">
+        <Scales />
         <Heading>Projects</Heading>
         <SubHeading>Here are some of the projects I&apos;ve worked on.</SubHeading>
         <Projects />

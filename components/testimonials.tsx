@@ -4,8 +4,8 @@ import SectionHeading from './section-heading'
 
 function Testimonials() {
   return (
-    <div className='py-10'>
-        <SectionHeading delay={0.8} className='pb-4'>People love my work!</SectionHeading>
+    <div className='my-4 py-4 px-4 border-y border-neutral-100 shadow-section-inset'>
+        <SectionHeading delay={0.8}>People love my work!</SectionHeading>
           <div className="flex mask-[linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]">
         <Marquee speed={20} pauseOnHover className='py-4'>
             {testimonials.map((item, idx) => (

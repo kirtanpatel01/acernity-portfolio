@@ -10,8 +10,8 @@ async function LandingBlogs() {
     return str.length > length ? str.substring(0, length) + "..." : str;
   }
   return (
-    <div className=''>
-      <SectionHeading delay={0.4} className='pb-4'>I love lakhvanu 😋</SectionHeading>
+    <div className='px-4'>
+      <SectionHeading delay={0.4}>I love lakhvanu 😋</SectionHeading>
       <div className="flex flex-col gap-8">
         {allBlogs.slice(0, 3).map((blog, idx) => (
           <MotionDiv

@@ -3,17 +3,18 @@
 import { cn } from '@/lib/utils'
 import { motion } from 'motion/react'
 
-function SectionHeading({ 
-  children, 
-  delay=0,
+function SectionHeading({
+  children,
+  delay = 0,
   className
-} : { 
-  children: string, 
-  delay: number,
+}: {
+  children: string,
+  delay?: number,
   className?: string
 }) {
   return (
-    <h2 className={cn('max-w-lg pt-4 text-sm font-normal', className)}>
+    <h2 className={cn('relative mt-4 w-fit text-sm font-normal', className)}>
+      <Background />
       {children.split(" ").map((word, idx) => (
         <motion.span
           initial={{
@@ -31,7 +32,7 @@ function SectionHeading({
             duration: 0.5,
             ease: "easeInOut",
           }}
-          key={word+idx}
+          key={word + idx}
           viewport={{
             once: true
           }}
@@ -44,3 +45,25 @@ function SectionHeading({
 }
 
 export default SectionHeading
+
+const Background = () => {
+  return (
+  <motion.div 
+    initial={{
+      opacity: 0,
+    }}
+    whileInView={{
+      opacity: 1,
+    }}
+    transition={{
+      duration: 0.3,
+      ease: "easeInOut",
+      delay: 1,
+    }}
+    className="absolute h-full w-full inset-0 scale-[1.02] bg-neutral-100 ">
+    <div className="h-1 w-1 rounded-full bg-neutral-200 absolute -top-px -left-px"></div>
+    <div className="h-1 w-1 rounded-full bg-neutral-200 absolute -top-px -right-px"></div>
+    <div className="h-1 w-1 rounded-full bg-neutral-200 absolute -bottom-px -left-px"></div>
+    <div className="h-1 w-1 rounded-full bg-neutral-200 absolute -bottom-px -right-px"></div>
+  </motion.div>)
+}

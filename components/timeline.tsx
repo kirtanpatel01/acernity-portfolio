@@ -11,7 +11,7 @@ function Timeline() {
   const isInView = useInView(ref, { once: true, amount: 0.6 })
 
   return (
-    <div className='py-10'>
+    <div className='py-4 px-4 my-6 border-y border-neutral-100 shadow-section-inset'>
       {timelineData.map((year, index) => (
         <div ref={ref} key={year.title} className='flex flex-col mb-4'>
           <motion.h2

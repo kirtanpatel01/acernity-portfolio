@@ -14,7 +14,7 @@ function Navbar() {
   const [scrolled, setScrolled] = useState<boolean>(false);
 
   const y = useTransform(scrollY, [0, 100], [0, 10]);
-  const width = useTransform(scrollY, [0, 100], ["44%", "36%"]);
+  const width = useTransform(scrollY, [0, 100], ["43.5%", "36%"]);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     if (latest > 20) {
