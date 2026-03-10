@@ -1,6 +1,8 @@
 import React from 'react'
 import { getBlogs } from '../app/utils/mdx'
 import { Link } from 'next-view-transitions';
+import SectionHeading from './section-heading';
+import MotionDiv from './motion-div';
 
 async function LandingBlogs() {
   const allBlogs = await getBlogs();
@@ -9,10 +11,27 @@ async function LandingBlogs() {
   }
   return (
     <div>
-      <p className='text-secondary text-sm pt-4 mb-12'>I love lakhvanu 😋</p>
+      <SectionHeading delay={0.4} className='pb-4'>I love lakhvanu 😋</SectionHeading>
       <div className="flex flex-col gap-4">
-          {allBlogs.map((blog) => (
-            <Link
+          {allBlogs.map((blog, idx) => (
+            <MotionDiv
+              initial={{
+                opacity: 0,
+                y: 10,
+                filter: "blur(10px)",
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+                filter: "blur(0px)",
+              }}
+              transition={{
+                duration: 0.3,
+                delay: 0.1 * idx,
+                ease: "easeInOut"
+              }}
+            >
+              <Link
               key={blog.slug}
               href={`/blog/${blog.slug}`}
               className=""
@@ -32,6 +51,7 @@ async function LandingBlogs() {
                 {truncate(blog.description || "", 150)}
               </p>
             </Link>
+            </MotionDiv>
           ))}
         </div>
     </div>

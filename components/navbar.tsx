@@ -5,14 +5,9 @@ import Image from 'next/image'
 import { useState } from "react";
 import Link from 'next/link';
 import { motion, useScroll, useMotionValueEvent, useTransform, useMotionTemplate } from 'motion/react';
+import { navItems } from '@/constants/nav';
 
 function Navbar() {
-  const navItems = [
-    { name: 'About', href: '/about' },
-    { name: 'Projects', href: '/projects' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Blog', href: '/blog' },
-  ]
 
   const [hovered, setHovered] = useState<number | null>(null);
   const { scrollY } = useScroll();
